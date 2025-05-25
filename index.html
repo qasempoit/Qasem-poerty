@@ -3,23 +3,66 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>دفتر قاسم الحويطات</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ديوان قاسم الحويطات</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #fdf6ee;
+            color: #4b3e2e;
+        }
+        header {
+            background-image: url('cover.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            position: relative;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            background-color: rgba(0,0,0,0.5);
+        }
+        header h1 {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            color: white;
+            z-index: 2;
+            font-size: 36px;
+        }
+        nav {
+            background-color: #8b6f47;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #f2e6d9;
+            padding: 15px;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-    <div class="notebook">
-        <header>
-            <h1>📖 دفتر قاسم الحويطات</h1>
-            <p>هنا أشارككم بعضاً من أشعاري</p>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="allaqtani.html">علّقتني فيك</a></li>
-            </ul>
-        </nav>
-        <footer>
-            تابعني على سناب: <strong>jn.obe</strong>
-        </footer>
-    </div>
+    <header>
+        <h1>ديوان قاسم الحويطات</h1>
+    </header>
+    <nav>
+        <a href="allaqtni.html">علّقتني فيك</a>
+        <a href="wajbat_kalam.html">وجبة كلام</a>
+    </nav>
+    <footer>
+        سنابي: jn.obe
+    </footer>
 </body>
 </html>
