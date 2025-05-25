@@ -1,0 +1,53 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Amiri', serif;
+    background: url('https://i.imgur.com/8Z7ZQYb.png') repeat-y center;
+    background-color: #fff8f0;
+    color: #3e2f2f;
+}
+
+.notebook {
+    max-width: 700px;
+    margin: auto;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 10px #ccc;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #8b0000;
+    font-size: 32px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav li {
+    margin: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 22px;
+    color: #5c2e2e;
+    border-bottom: 1px dashed #5c2e2e;
+}
+
+nav a:hover {
+    color: #8b0000;
+}
+
+footer {
+    margin-top: 50px;
+    font-size: 18px;
+    text-align: center;
+}
