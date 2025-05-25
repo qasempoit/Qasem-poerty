@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>وجبة كلام - قاسم الحويطات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="poem">
+        <h1>وجبة كلام</h1>
+        <p>قبل وقت اللقا جيت ومعي وجبة كلامٍ حار<br>
+        محضّرها على ذوقي لاجل قلبك يجرّبها<br>
+        واحس انها بدت تبرد وانا زايد عليها النّار<br>
+        اخاف النّار تحرقني الى من جيت اقلّبها<br>
+        تأخّرتي عن الموعد وانا قاعد مع الأعذار<br>
+        نحاول ننعش الساعة قبل ما يموت عقربها<br>
+        وانا من كثر ما تقلقني الغيبه بديت انهار<br>
+        اصبّر نفسي بنفسي واطمنّها والاعبها<br>
+        معك ما كنت متأني ولا كنت احسب الاخطار<br>
+        ولا افكر سوى بلحظة لقانا كيف اقرّبها<br>
+        بكى من غيبتك كرسي ونافورة وسور ودار<br>
+        وأزهار الحديقة والنسيم اللي يداعبها<br>
+        تعالي لا تخافي الحب انا ابن الغرام البار<br>
+        لو انها فيك ما طابت حياتي كيف اطيب بها<br>
+        تعالي للشجاع اللي تهاجم عقله الافكار<br>
+        قضى عمره وهو واقف على شانك يحاربها<br>
+        تعالي واوعدك باني ما اسوي للعتب تكرار<br>
+        مدام المخطيه عيونك انا مجنون اعاتبها<br>
+        تعالي واتركي سرّك وقلبي بير للأسرار<br>
+        يموت وينتهي حلمه ولا فكّر يسرّبها<br>
+        تعالي في دروب الحب نمشي خطوتين قصار<br>
+        وامانة لا تخلي الشك يمشي في مساربها<br>
+        تعالي للمكان اللي مشينا به كذا مشوار<br>
+        نجدد ذكريات الحب ونجدد تجاربها<br>
+        تعالي نستغل الوقت قبل يطير فالأعمار<br>
+        مدام ان للزمن فرصة وحيدة لا نخربّها<br>
+        تعالي دام هالدنيا قصيرة والزمن دوّار<br>
+        يا نسرف في مشاعرنا يا نبعد عن مضاربها<br>
+        تعالي قبل شمس الصبح تخفينا عن الانظار<br>
+        وتتلاشى الطموحات الكبيرة عند صاحبها<br>
+        ما مدام ان الامل موجود لا نفكّر ولا نحتار<br>
+        تعالي ندعم البسمات ونشجّع مواهبها<br>
+        واذا ودّك تخلّيني تعالي للوداع الحار<br>
+        مجهّز للفراق ابيات قبل شهور كاتبها</p>
+
+        <button onclick="likePoem()" style="margin-top: 20px;">❤️ أعجبني</button>
+        <p id="like-count">0 إعجابات</p>
+        
+        <script>
+            function likePoem() {
+                let count = localStorage.getItem(location.pathname) || 0;
+                count++;
+                localStorage.setItem(location.pathname, count);
+                document.getElementById('like-count').innerText = `${count} إعجابات`;
+            }
+            window.onload = function() {
+                let count = localStorage.getItem(location.pathname) || 0;
+                document.getElementById('like-count').innerText = `${count} إعجابات`;
+            };
+        </script>
+
+        <script src="https://utteranc.es/client.js"
+                repo="qasempoit/Qasem-poetry"
+                issue-term="pathname"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
+</body>
+</html>

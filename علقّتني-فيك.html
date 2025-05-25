@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>علّقتني فيك - قاسم الحويطات</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="poem">
+        <h1>علّقتني فيك</h1>
+        <p>ما مرّك الشوق والّا صرت ناسيني<br>
+        ما جا ببالك بعد ما مت تحييني<br>
+        انا ادري انّك من ذنوب الهوى تايب<br>
+        بس الضرورة تبيح الذنب في ديني<br>
+        لا زلت في صورتك متأمل وخايف<br>
+        بعد السنين العظيمة تطيح من عيني<br>
+        تعال نرسم على الاوهام قصّتنا<br>
+        اليوم حتّى الخيال الكذب يكفيني<br>
+        انا اوّل انسان حبّك وانت حبّيته<br>
+        لا تخلّي الشك ياخذني ويرميني<br>
+        حاولت ادوّر عليك وضاعت اقدامي<br>
+        ونفسي نست بعد ضيقتها عناويني<br>
+        لو ودّي امشي معا غيرك من الأوّل<br>
+        ما كان حطّيت حبّك في شراييني<br>
+        ادوّرك في الهدايا واختبي فيها<br>
+        على أمل تنعش الذكرى بساتيني<br>
+        علّقتني فيك واخترت ان نهايتنا<br>
+        من غير ضمّة وداعٍ بينك وبيني<br>
+        ان كان ما ودّك ترجّع علاقتنا<br>
+        خذ ذكرياتك قبل بالبعد تعميني</p>
+
+        <button onclick="likePoem()" style="margin-top: 20px;">❤️ أعجبني</button>
+        <p id="like-count">0 إعجابات</p>
+        
+        <script>
+            function likePoem() {
+                let count = localStorage.getItem(location.pathname) || 0;
+                count++;
+                localStorage.setItem(location.pathname, count);
+                document.getElementById('like-count').innerText = `${count} إعجابات`;
+            }
+            window.onload = function() {
+                let count = localStorage.getItem(location.pathname) || 0;
+                document.getElementById('like-count').innerText = `${count} إعجابات`;
+            };
+        </script>
+
+        <script src="https://utteranc.es/client.js"
+                repo="qasempoit/Qasem-poetry"
+                issue-term="pathname"
+                theme="github-light"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
+</body>
+</html>
